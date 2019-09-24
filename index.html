@@ -3,89 +3,95 @@
 <head>
 	<title>Who's Round Is It?</title>
     <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script type="text/javascript">
 
+        function Person(name, drink, milk, sugar) {
+            this.Name = name;
+            this.Drink = drink;
+            this.Milk = milk;
+            this.Sugar = sugar;
+        }
+
+        let scott = new Person("Scott", "Coffee", "No", "No");
+        let james = new Person("James", "Coffee", "Yes", "No");
+        let meg = new Person("Meg", "Coffee", "Yes", "No");
+        let howie = new Person("Howie", "tea", "Yes", "No");
+        let tony = new Person("Tony", "Coffee", "No", "No");
+
+        const coworkers = [scott, james, meg, howie, tony];
+
+
+        function randomPerson(chosenArray) {
+
+            return chosenArray = chosenArray[Math.floor(Math.random() * chosenArray.length)];
+
+        }
+
+        let chosenPerson = randomPerson(coworkers);
+        console.log(chosenPerson.Name);
+
+
+        // math.floor rounds down, returning an integer
+        // math.random always returns a random number lower than 1
+        // coworkers.length counts how many items are in the array
+        // math.random * coworkers length returns a number between 0 and the total numbers of coworkers
+
+
+
+
+
+
+    </script>
 </head>
 
 <body>
 
     <div id="main">
         <div id="coworkers-wrapper">
+<script>
+        coworkers.forEach(personLayout);
 
-            <div class="coworker">
-                <p class="name"></p>
-                <p class="drink"></p>
-                <p class="milk"></p>
-                <p class="sugar"></p>
-            </div>
-            <div class="coworker">
-                <p class="name"></p>
-                <p class="drink"></p>
-                <p class="milk"></p>
-                <p class="sugar"></p>
-            </div>
-            <div class="coworker">
-                <p class="name"></p>
-                <p class="drink"></p>
-                <p class="milk"></p>
-                <p class="sugar"></p>
-            </div>
-            <div class="coworker">
-                <p class="name"></p>
-                <p class="drink"></p>
-                <p class="milk"></p>
-                <p class="sugar"></p>
-            </div>
-            <div class="coworker">
-                <p class="name"></p>
-                <p class="drink"></p>
-                <p class="milk"></p>
-                <p class="sugar"></p>
-            </div>
+        function personLayout(){
+            document.getElementById('coworkers-wrapper').append('<div class="coworker"><p class="name">'+this.name+'</p></div>');
+        }
+</script>
+<!--            <div class="coworker">-->
+<!--                <p class="name"></p>-->
+<!--                <p class="drink"></p>-->
+<!--                <p class="milk"></p>-->
+<!--                <p class="sugar"></p>-->
+<!--            </div>-->
+<!--            <div class="coworker">-->
+<!--                <p class="name"></p>-->
+<!--                <p class="drink"></p>-->
+<!--                <p class="milk"></p>-->
+<!--                <p class="sugar"></p>-->
+<!--            </div>-->
+<!--            <div class="coworker">-->
+<!--                <p class="name"></p>-->
+<!--                <p class="drink"></p>-->
+<!--                <p class="milk"></p>-->
+<!--                <p class="sugar"></p>-->
+<!--            </div>-->
+<!--            <div class="coworker">-->
+<!--                <p class="name"></p>-->
+<!--                <p class="drink"></p>-->
+<!--                <p class="milk"></p>-->
+<!--                <p class="sugar"></p>-->
+<!--            </div>-->
+<!--            <div class="coworker">-->
+<!--                <p class="name"></p>-->
+<!--                <p class="drink"></p>-->
+<!--                <p class="milk"></p>-->
+<!--                <p class="sugar"></p>-->
+<!--            </div>-->
 
 
         </div>
 
     </div>
 
-<script type="text/javascript">
 
-    function Person(name, drink, milk, sugar) {
-        this.Name = name;
-        this.Drink = drink;
-        this.Milk = milk;
-        this.Sugar = sugar;
-    }
-
-    let scott = new Person("Scott", "Coffee", "No", "No");
-    let james = new Person("James", "Coffee", "Yes", "No");
-    let meg = new Person("Meg", "Coffee", "Yes", "No");
-    let howie = new Person("Howie", "tea", "Yes", "No");
-    let tony = new Person("Tony", "Coffee", "No", "No");
-
-    const coworkers = [scott, james, meg, howie, tony];
-
-
-    function randomPerson(chosenArray) {
-
-        return chosenArray = chosenArray[Math.floor(Math.random() * chosenArray.length)];
-
-    }
-
-    let chosenPerson = randomPerson(coworkers);
-    console.log(chosenPerson.Name);
-
-
-    // math.floor rounds down, returning an integer
-    // math.random always returns a random number lower than 1
-    // coworkers.length counts how many items are in the array
-    // math.random * coworkers length returns a number between 0 and the total numbers of coworkers
-
-
-
-
-
-
-</script>
 
 
 </body>
