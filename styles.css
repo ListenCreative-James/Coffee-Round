@@ -20,6 +20,8 @@ body {
   justify-content: space-between; }
   #coworkers-wrapper .coworker {
     width: 30%;
-    height: 450px; }
+    height: 450px;
+    border: 2px solid #daa49a;
+    border-radius: 15px; }
 
 /*# sourceMappingURL=styles.css.map */
