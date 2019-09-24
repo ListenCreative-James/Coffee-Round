@@ -51,8 +51,27 @@
 <script>
         coworkers.forEach(personLayout);
 
-        function personLayout(){
-            document.getElementById('coworkers-wrapper').append('<div class="coworker"><p class="name">'+this.name+'</p></div>');
+        function personLayout(coworkers){
+
+        const div = document.createElement('div');
+        const pName = document.createElement('p');
+        const pDrink = document.createElement('p');
+        const pMilk = document.createElement('p');
+        const pSugar = document.createElement('p');
+
+        const wrapper = getElementById('coworkers-wrapper');
+            wrapper.append(div);
+            div.append(pName);
+            div.append(pDrink);
+            div.append(pMilk);
+            div.append(pSugar);
+
+            pName.innerHTML = this.Name;
+            pDrink.innerHTML = this.Drink;
+            pMilk.innerHTML = this.Milk;
+            pSugar.innerHTML = this.Sugar;
+
+
         }
 </script>
 <!--            <div class="coworker">-->
