@@ -49,10 +49,9 @@
     <div id="main">
         <div id="coworkers-wrapper">
 <script>
-        coworkers.forEach(personLayout);
 
-        function personLayout(coworkers){
 
+        const personLayout = function(Person){
         const div = document.createElement('div');
         const pName = document.createElement('p');
         const pDrink = document.createElement('p');
@@ -61,18 +60,23 @@
 
         const wrapper = document.getElementById('coworkers-wrapper');
             wrapper.append(div);
+
             div.append(pName);
             div.append(pDrink);
             div.append(pMilk);
             div.append(pSugar);
 
-            pName.innerHTML = this.Name;
-            pDrink.innerHTML = this.Drink;
-            pMilk.innerHTML = this.Milk;
-            pSugar.innerHTML = this.Sugar;
+            div.setAttribute('class','coworker');
+            pName.innerHTML = Person.Name;
+            pDrink.innerHTML = Person.Drink;
+            pMilk.innerHTML = Person.Milk;
+            pSugar.innerHTML = Person.Sugar;
 
 
-        }
+        };
+        coworkers.forEach(function(Person){
+            personLayout(Person)
+        });
 </script>
 <!--            <div class="coworker">-->
 <!--                <p class="name"></p>-->
