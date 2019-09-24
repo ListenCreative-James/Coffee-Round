@@ -51,7 +51,7 @@
 <script>
 
 
-        const personLayout = function(Person){
+        const personLayout = function(hello){
         const div = document.createElement('div');
         const pName = document.createElement('p');
         const pDrink = document.createElement('p');
@@ -67,15 +67,21 @@
             div.append(pSugar);
 
             div.setAttribute('class','coworker');
-            pName.innerHTML = Person.Name;
-            pDrink.innerHTML = Person.Drink;
-            pMilk.innerHTML = Person.Milk;
-            pSugar.innerHTML = Person.Sugar;
+            pName.setAttribute('class','name');
+            pDrink.setAttribute('class','drink');
+            pMilk.setAttribute('class','milk');
+            pSugar.setAttribute('class','sugar');
+
+            pName.innerHTML = hello.Name;
+            pDrink.innerHTML = hello.Drink;
+            pMilk.innerHTML = hello.Milk;
+            pSugar.innerHTML = hello.Sugar;
 
 
         };
-        coworkers.forEach(function(Person){
-            personLayout(Person)
+        coworkers.forEach(function(hello){
+            personLayout(hello);
+            console.log('new');
         });
 </script>
 <!--            <div class="coworker">-->
