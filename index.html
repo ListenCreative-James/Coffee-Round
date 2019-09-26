@@ -23,11 +23,12 @@
 
         function randomPerson(chosenArray) {
 
-            return chosenArray = chosenArray[Math.floor(Math.random() * chosenArray.length)];
+            let chosenPerson = chosenArray[Math.floor(Math.random() * chosenArray.length)];
+            alert(chosenPerson.Name+', it\'s your round!');
 
         }
 
-        let chosenPerson = randomPerson(coworkers);
+        // let chosenPerson = randomPerson(coworkers);
         console.log(chosenPerson.Name);
 
 
@@ -74,9 +75,9 @@
             pSugar.setAttribute('class','sugar');
 
             pName.innerHTML = object.Name;
-            pDrink.innerHTML = object.Drink;
-            pMilk.innerHTML = object.Milk;
-            pSugar.innerHTML = object.Sugar;
+            pDrink.innerHTML = "Drinks "+object.Drink;
+            pMilk.innerHTML = "Any milk? "+object.Milk;
+            pSugar.innerHTML = "Sugar? "+object.Sugar;
 
 
         };
@@ -87,6 +88,9 @@
 
 
 
+        </div>
+        <div class="button-wrapper">
+            <button onclick="randomPerson(coworkers)">Coffee Time!</button>
         </div>
 
     </div>
