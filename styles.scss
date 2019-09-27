@@ -1,7 +1,32 @@
+/* colour scheme colours
+
+#d8dbe2 - gainsboro
+#a9bcd0 - pastel blue
+#58a4b0 - cadet blue
+#373f51 - background - charcoal
+#daa49a - pastel pink
+ */
+
 body {
- color: blue;
+ background-color:#373F51;
   p {
-    color:pink;
+    color:#A9BCD0;
     font-size:20px;
+  }
+}
+
+#coworkers-wrapper {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  .coworker {
+    width:30%;
+    height:450px;
+    border:2px solid #daa49a;
+    border-radius:15px;
+
+
   }
 }
